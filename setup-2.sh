@@ -25,3 +25,19 @@ sudo usermod -a -G microk8s $USER
 # Set correct permissions
 sudo chown -f -R $USER ~/.kube
 
+# Set timezone (example: Europe/Rome)
+sudo timedatectl set-timezone Europe/Rome
+
+# Configure hostname (replace peer-X with appropriate name)
+sudo hostnamectl set-hostname peer-1
+
+# Add hostname to hosts file
+echo "127.0.0.1 $(hostname)" | sudo tee -a /etc/hosts
+
+
+echo === Create alias for kubectl ===
+echo "alias kubectl='microk8s kubectl'" >> ~/.bashrc
+source ~/.bashrc
+
+# Verify kubectl
+kubectl version
