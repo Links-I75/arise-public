@@ -19,7 +19,7 @@ sudo chown -f -R $USER ~/.kube
 
 
 
-# Enable necessary add-ons
+echo === Enable necessary add-ons ===
 microk8s enable dashboard dns storage
 
 # Optional: enable Prometheus for monitoring
