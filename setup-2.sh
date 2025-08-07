@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-# 1. Install snapd
+echo Install snapd
 sudo apt install snapd -y
 
 echo Install MicroK8s
