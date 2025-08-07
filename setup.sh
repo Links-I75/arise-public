@@ -8,6 +8,7 @@ sudo apt install -y curl wget git nano vim
 
 
 echo
+echo
 echo === Installazione Docker ===
 
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
@@ -22,3 +23,8 @@ sudo systemctl enable docker
 sudo usermod -aG docker $USER
 
 
+echo === Test Docker installation
+sudo docker --version
+
+echo === Run a test container (after re-login) ===
+sudo docker run hello-world
