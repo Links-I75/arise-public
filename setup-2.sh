@@ -4,14 +4,14 @@ set -e
 # 1. Install snapd
 sudo apt install snapd -y
 
-# 2. Install MicroK8s
+echo Install MicroK8s
 sudo snap install microk8s --classic
 
-# 3. Wait for MicroK8s to be ready
+echo Wait for MicroK8s to be ready
 microk8s status --wait-ready
 
 
-# Add current user to microk8s group
+echo Add current user to microk8s group
 sudo usermod -a -G microk8s $USER
 
 # Set correct permissions
@@ -27,6 +27,3 @@ microk8s enable prometheus
 
 # Verify enabled add-ons
 microk8s status
-
-# Apply changes (requires new login)
-newgrp microk8s
