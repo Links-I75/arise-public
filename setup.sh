@@ -70,9 +70,11 @@ sudo hostnamectl set-hostname peer-1
 echo "127.0.0.1 $(hostname)" | sudo tee -a /etc/hosts
 
 
+echo
 echo === Create alias for kubectl ===
-echo "alias kubectl='microk8s kubectl'" >> ~/.bashrc
-source ~/.bashrc
+# Cambiare path .bashrc in base al server questo è valido per EC2, verificare altri server
+echo "alias kubectl='microk8s kubectl'" >> /home/ubuntu/.bashrc
 
+# source ~/.bashrc
 # Verify kubectl
 # kubectl version # Todo: Fix this produce error
