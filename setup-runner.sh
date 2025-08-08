@@ -19,3 +19,4 @@ sudo curl -L https://raw.githubusercontent.com/Links-I75/arise-public/main/start
 sudo chmod +x /usr/local/bin/start-actions-runner.sh
 
 sudo curl -L https://raw.githubusercontent.com/Links-I75/arise-public/main/actions-runner.service -o /etc/systemd/system/actions-runner.service
+
