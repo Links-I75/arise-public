@@ -39,9 +39,6 @@ echo === Run a test container after re-login ===
 sudo docker run hello-world
 
 
-#!/bin/bash
-set -e
-
 echo Install snapd
 sudo apt install snapd -y
 
