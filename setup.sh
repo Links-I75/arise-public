@@ -42,7 +42,7 @@ sudo docker run hello-world
 echo Install MicroK8s
 sudo snap install microk8s --classic
 
-echo Wait for MicroK8s to be ready
+echo "Wait for MicroK8s to be ready"
 sudo microk8s status --wait-ready
 
 echo === Enable necessary add-ons ===
