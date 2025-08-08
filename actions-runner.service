@@ -1,0 +1,12 @@
+[Unit]
+Description=GitHub Actions Runner
+After=network.target
+
+[Service]
+Type=simple
+User=ubuntu
+ExecStart=/usr/local/bin/start-actions-runner.sh
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
