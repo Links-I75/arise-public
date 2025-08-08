@@ -1,14 +1,6 @@
 #!/bin/bash
 set -xe
 
-echo "Permessi senza sudo"
-
-echo Add current user to microk8s group
-sudo usermod -a -G microk8s $USER
-
-# Set correct permissions
-sudo chown -f -R $USER ~/.kube
-
 
 echo "===========  Installazione runner  ============"
 
@@ -28,4 +20,12 @@ sudo curl -L https://raw.githubusercontent.com/Links-I75/arise-public/main/start
 sudo chmod +x /usr/local/bin/start-actions-runner.sh
 
 sudo curl -L https://raw.githubusercontent.com/Links-I75/arise-public/main/actions-runner.service -o /etc/systemd/system/actions-runner.service
+
+echo "===========Permessi senza sudo"
+
+echo Add current user to microk8s group
+sudo usermod -a -G microk8s $USER
+
+# Set correct permissions
+sudo chown -f -R $USER ~/.kube
 
