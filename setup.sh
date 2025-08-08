@@ -1,5 +1,5 @@
 #!/bin/bash
-set -ex
+set -xe
 
 echo
 echo === Aggiorno e installo pacchetti essenziali ===
