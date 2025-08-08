@@ -78,3 +78,5 @@ echo "alias kubectl='microk8s kubectl'" >> /home/ubuntu/.bashrc
 # source ~/.bashrc
 # Verify kubectl
 # kubectl version # Todo: Fix this produce error
+
+
