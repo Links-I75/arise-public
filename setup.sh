@@ -54,11 +54,7 @@ sudo microk8s enable prometheus
 # Verify enabled add-ons
 sudo microk8s status
 
-echo Add current user to microk8s group
-sudo usermod -a -G microk8s $USER
 
-# Set correct permissions
-sudo chown -f -R $USER ~/.kube
 
 # Set timezone (example: Europe/Rome)
 sudo timedatectl set-timezone Europe/Rome
@@ -71,7 +67,7 @@ echo "127.0.0.1 $(hostname)" | sudo tee -a /etc/hosts
 
 
 echo
-echo === Create alias for kubectl ===
+echo "=== Create alias for kubectl ==="
 # Cambiare path .bashrc in base al server questo è valido per EC2, verificare altri server
 echo "alias kubectl='microk8s kubectl'" >> /home/ubuntu/.bashrc
 

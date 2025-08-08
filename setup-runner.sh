@@ -1,7 +1,16 @@
 #!/bin/bash
 set -xe
 
-echo
+echo "Permessi senza sudo"
+
+echo Add current user to microk8s group
+sudo usermod -a -G microk8s $USER
+
+# Set correct permissions
+sudo chown -f -R $USER ~/.kube
+
+
+echo "===========  Installazione runner  ============"
 
 # Istruzioni da GitHub nella creazione di runner
 # Create a folder
