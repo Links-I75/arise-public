@@ -4,7 +4,7 @@ set -ex
 echo
 echo === Aggiorno e installo pacchetti essenziali ===
 sudo apt update && sudo apt upgrade -y
-sudo apt install -y curl wget git nano vim
+sudo apt install -y curl wget git nano vim snapd
 
 
 echo
@@ -38,9 +38,6 @@ sudo docker --version
 echo === Run a test container after re-login ===
 sudo docker run hello-world
 
-
-echo Install snapd
-sudo apt install snapd -y
 
 echo Install MicroK8s
 sudo snap install microk8s --classic
