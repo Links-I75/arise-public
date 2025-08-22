@@ -4,7 +4,7 @@ set -xe
 echo
 echo === Aggiorno e installo pacchetti essenziali ===
 sudo apt update && sudo apt upgrade -y
-sudo apt install -y curl wget git nano vim snapd
+sudo apt install -y curl wget git nano vim snapd jq
 
 
 echo
